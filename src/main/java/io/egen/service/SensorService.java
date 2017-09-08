@@ -34,7 +34,7 @@ public class SensorService implements SensorRepository {
 		this.base_value = base_value;
 	}
 
-	public List<Weight> findByTimeRange(String startTime, String endTime) {
+	public List<Weight> findBytimeStamp(String startTime, String endTime) {
 		log.log(Level.INFO,"Retrieving all JSON objects based on the timestamp range from" +startTime+ "to " + endTime);
 		Weight[] weights = restTemplate.getForObject(api_Url+"/findRange/{startTime}/{endTime}",Weight[].class);
 		return Arrays.asList(weights);

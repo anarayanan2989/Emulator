@@ -10,6 +10,6 @@ import io.egen.sensor.Weight;
 
 @Component
 public interface SensorRepository extends Repository<Weight,String>{
-	public List<Weight> findByTimeRange(@Param("start") String startTime, @Param("end") String endTime);
+	public List<Weight> findBytimeStamp(@Param("start") String startTime, @Param("end") String endTime);
 	public void save(Weight saved, String collectionName);
 }
