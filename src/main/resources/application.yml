@@ -1,7 +1,16 @@
 spring:
   application:
     name: sensor
-
-api.uri : http://consumer-service/
-
-base_value: 100
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: local
+      
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    
+server:
+  port: 8090

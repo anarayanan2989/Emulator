@@ -46,7 +46,6 @@ public class SensorController {
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void save(Weight obj ){
 			sensorService.save(obj, "metrics");
-			
 	}
 	
 	
